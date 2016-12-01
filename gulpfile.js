@@ -9,6 +9,7 @@ var minimist = require('minimist');
 var gulpIf = require('gulp-if');
 var stripDebug = require('gulp-strip-debug');
 var cssmin = require("gulp-cssmin");
+var del = require("del");
 
 var options = minimist(process.argv.slice(2)); // コマンドライン・オプション読み込み
 var isProduction = options.env == 'production';      // --env=productionと指定されたらリリース用
